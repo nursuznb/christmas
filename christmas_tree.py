@@ -1,6 +1,8 @@
 import json
 import os
 import streamlit as st
+st.set_page_config(layout="wide")
+
 
 # -------------------------------
 # GENERAL SETTINGS
@@ -277,3 +279,4 @@ else:
 
         st.subheader("Updated Tree")
         st.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
