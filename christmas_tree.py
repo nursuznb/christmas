@@ -1,6 +1,6 @@
 import json
 import os
-import datetime as dt   # ✅ eklendi
+import datetime as dt   
 import streamlit as st
 
 # -------------------------------
@@ -8,7 +8,7 @@ import streamlit as st
 # -------------------------------
 st.set_page_config(page_title="Data Interview Christmas Tree", page_icon="🎄")
 
-# 🔹 Google Analytics (Çözüm 2) - BURAYA KENDİ ID'İNİ YAZ
+# 🔹 Google Analytics 
 GA_SCRIPT = """
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
@@ -20,14 +20,14 @@ GA_SCRIPT = """
 </script>
 """
 
-# HTML/JS'i sayfaya enjekte et
+# HTML/JS
 st.markdown(GA_SCRIPT, unsafe_allow_html=True)
 
 NUM_QUESTIONS = 30
 DATA_FILE = "answers.json"
 
-# Challenge başlangıç tarihi (kendine göre değiştir)
-CHALLENGE_START = dt.date(2025, 12, 3)
+# Challenge başlangıç tarihi 
+CHALLENGE_START = dt.date(2025, 12, 2)
 
 # -------------------------------
 # FUNCTIONS
@@ -272,7 +272,40 @@ QUESTIONS = {
     )
 }
 
-CORRECT_OPTIONS = {i: "A" for i in range(1, 31)}
+# SORULARIN DOĞRU ŞIKLARI
+CORRECT_OPTIONS = {
+    1: "C",  # Q1: confidence interval sorusu → C şıkkı doğru
+    2: "A",
+    3: "B",
+    4: "D",
+    5: "A",
+    6: "C",
+    7: "B",
+    8: "D",
+    9: "A",
+    10: "C",
+    11: "B",
+    12: "D",
+    13: "A",
+    14: "B",
+    15: "C",
+    16: "D",
+    17: "A",
+    18: "C",
+    19: "B",
+    20: "D",
+    21: "A",
+    22: "B",
+    23: "C",
+    24: "D",
+    25: "A",
+    26: "C",
+    27: "B",
+    28: "D",
+    29: "A",
+    30: "B",
+}
+
 
 # -------------------------------
 # USER
@@ -311,7 +344,7 @@ else:
 # -------------------------------
 trunk_row = [1, 2]   # stem
 
-# Leaves indexes (bottom to top, sol→sağ)
+# Leaves indexes (bottom to top, left to right)
 idx = 3
 foliage_counts_bottom_up = [7, 6, 5, 4, 3, 2, 1]   # total 28
 foliage_rows_bottom_up = []
