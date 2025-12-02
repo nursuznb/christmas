@@ -1,8 +1,7 @@
 import json
 import os
+import datetime as dt   # ✅ eklendi
 import streamlit as st
-st.set_page_config(layout="wide")
-
 
 # -------------------------------
 # GENERAL SETTINGS
@@ -11,6 +10,9 @@ st.set_page_config(page_title="Data Interview Christmas Tree", page_icon="🎄")
 
 NUM_QUESTIONS = 30
 DATA_FILE = "answers.json"
+
+# Challenge başlangıç tarihi (kendine göre değiştir)
+CHALLENGE_START = dt.date(2025, 12, 3)
 
 # -------------------------------
 # FUNCTIONS
@@ -28,52 +30,234 @@ def save_data(data):
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-def get_current_day(answers_list):
-    """İlk cevapsız sorunun gün numarasını döndürür. Hepsi doluysa None."""
-    for i, a in enumerate(answers_list):
-        if a is None:
+def get_current_day(answers_list, max_open_day):
+    """
+    İlk cevapsız sorunun gün numarasını döndürür,
+    ama sadece max_open_day'e kadar bakar.
+    Hepsi doluysa None.
+    """
+    for i in range(max_open_day):
+        if answers_list[i] is None:
             return i + 1
-    return None  # tüm sorular cevaplanmış
+    return None  # bugüne kadar olan soruların hepsi cevaplanmış
 
 # -------------------------------
 # QUESTIONS and ANSWERS
 # -------------------------------
-QUESTIONS ={
-   1: (
+QUESTIONS = {
+    1: (
+       "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    2: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
         "- **A)** One-Hot Encoding\n"
         "- **B)** Principal Component Analysis\n"
         "- **C)** Logistic Regression\n"
         "- **D)** Feature Scaling\n"
-  ),
-    #2: (
-      # "Which of the following is NOT a supervised learning algorithm?\n\n"
-      # "A) Linear Regression\n\n"
-     #   "B) K-Means Clustering\n\n"
-      #  "C) Random Forest\n\n"
-      #  "D) Logistic Regression\n\n"
-    #),
-    #3: (
-       # "What does regularization do in a model?\n"
-       # "A) Increases training error\n"
-       # "B) Increases model complexity\n"
-       # "C) Penalizes large weights to reduce overfitting\n"
-        #"D) Removes features randomly\n"
-    #),
-    # 4: "Gün 4 sorusu...",
-    # ...
-    # 30: "Gün 30 sorusu..."
+    ),
+    3: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    4: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    5: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    6: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    7: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    8: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    9: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    10: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    11: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    12: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    13: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    14: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    15: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    16: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    17: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    18: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    19: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    20: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    21: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    22: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    23: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    24: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    25: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    26: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    27: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    28: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    29: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    ),
+    30: (
+        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "- **A)** One-Hot Encoding\n"
+        "- **B)** Principal Component Analysis\n"
+        "- **C)** Logistic Regression\n"
+        "- **D)** Feature Scaling\n"
+    )
 }
 
-CORRECT_OPTIONS = {
-   1: "A",   
-   # 2: "B",   
-    #3: "C",
-    # 4: "A",
-    # ...
-    # 30: "D",
-}
-
+CORRECT_OPTIONS = {i: "A" for i in range(1, 31)}
 
 # -------------------------------
 # USER
@@ -89,22 +273,30 @@ data = load_data()
 user_record = data.get(username, {"answers": [None] * NUM_QUESTIONS})
 answers = user_record["answers"]
 
-current_day = get_current_day(answers)
+# --- BUGÜN EN FAZLA HANGİ GÜNE KADAR SORU AÇILABİLİR? ---
+today = dt.date.today()
+days_since_start = (today - CHALLENGE_START).days
+
+if days_since_start < 0:
+    max_open_day = 1
+else:
+    max_open_day = min(NUM_QUESTIONS, days_since_start + 1)
+
+current_day = get_current_day(answers, max_open_day)
 
 if current_day is None:
-    st.sidebar.markdown("✅ All questions completed! 🎉")
+    st.sidebar.markdown(
+        f"✅ All questions up to day {max_open_day} are completed! 🎉"
+    )
 else:
     st.sidebar.markdown(f"Today's question: **{current_day}**")
 
 # -------------------------------
 # TREE STRUCTURE
 # -------------------------------
-# 1–2: stem (1 row × 2 column)
-# 3–30: leaves (28 box, triangle)
-
 trunk_row = [1, 2]   # stem
 
-# Leaves indexes (bottom to top, sol→sağleft to right)
+# Leaves indexes (bottom to top, sol→sağ)
 idx = 3
 foliage_counts_bottom_up = [7, 6, 5, 4, 3, 2, 1]   # total 28
 foliage_rows_bottom_up = []
@@ -116,33 +308,6 @@ for count in foliage_counts_bottom_up:
 # -------------------------------
 # AĞAÇ OLUŞTURMA (HTML + CSS GRID)
 # -------------------------------
-def cell_emoji(cell_index, answers_list):
-    """Color logic (we're using it just for clarification for now)."""
-    state = None
-    if 1 <= cell_index <= NUM_QUESTIONS:
-        state = answers_list[cell_index - 1]
-
-    # Stem (1–2)
-    if cell_index in trunk_row:
-        if state is True:
-            return "🟫"
-        elif state is False:
-            return "⬛"
-        else:
-            return "⬜"
-
-    # Leaves(3–30)
-    if 3 <= cell_index <= NUM_QUESTIONS:
-        if state is True:
-            return "🟩"
-        elif state is False:
-            return "🟥"
-        else:
-            return "⬜"
-
-    return "⬜"
-
-
 def cell_class(cell_index, answers_list):
     """For HTML: CSS class based on cell type and response."""
     state = None
@@ -186,24 +351,83 @@ def generate_tree_html(answers_list):
         border-radius: 4px;
         background: #f1ecff;
         box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+        position: relative;
+        overflow: visible;
     }
 
-    /* Yaprak renkleri */
-    .tree-cell.leaf.correct { background: #4caf50; }   /* yeşil */
-    .tree-cell.leaf.wrong   { background: #e53935; }   /* kırmızı */
-    .tree-cell.leaf.empty   { background: #e9ddff; }   /* lila / boş */
+    /* YILDIZ (en tepe) */
+    .tree-row.star-row {
+        margin-bottom: 4px;
+    }
+    .tree-star-wrapper {
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .tree-star {
+        font-size: 18px;
+        line-height: 1;
+        animation: star-glow 1.4s ease-in-out infinite alternate;
+        filter: drop-shadow(0 0 4px #fffde7);
+    }
+
+    @keyframes star-glow {
+        0% {
+            transform: translateY(0px) scale(1);
+            text-shadow:
+                0 0 3px #fff9c4,
+                0 0 6px #fff176,
+                0 0 10px #ffd54f;
+        }
+        100% {
+            transform: translateY(-1px) scale(1.05);
+            text-shadow:
+                0 0 6px #fff9c4,
+                0 0 10px #fff176,
+                0 0 16px #ffeb3b;
+        }
+    }
+
+    /* Yaprak temel renkleri */
+    .tree-cell.leaf.correct { background: #4caf50; }
+    .tree-cell.leaf.wrong   { background: #e53935; }
+    .tree-cell.leaf.empty   { background: #e9ddff; }
 
     /* Gövde renkleri */
-    .tree-cell.stem.correct { background: #795548; }   /* kahverengi */
-    .tree-cell.stem.wrong   { background: #212121; }   /* siyah */
-    .tree-cell.stem.empty   { background: #bdbdbd; }   /* gri */
+    .tree-cell.stem.correct { background: #795548; }
+    .tree-cell.stem.wrong   { background: #212121; }
+    .tree-cell.stem.empty   { background: #bdbdbd; }
+
+    /* 🎄 KUTU İÇİ MOR YILBAŞI TOPLARI (tüm yaprak kutuları için) */
+    .tree-cell.leaf::before {
+        content: "🔮";
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.25);
+    }
+
     </style>
     """
 
     rows_html = []
 
+    # 0) YILDIZ SATIRI (ağacın en tepesi)
+    star_row = """
+    <div class="tree-row star-row">
+        <div class="tree-star-wrapper">
+            <div class="tree-star">⭐</div>
+        </div>
+    </div>
+    """
+    rows_html.append(star_row)
+
     # 1) Leaves:
-    for row_indices in reversed(foliage_rows_bottom_up):  # alttan üste tanımlı → ters çevir
+    for row_indices in reversed(foliage_rows_bottom_up):
         cells = []
         for idx in row_indices:
             classes = cell_class(idx, answers_list)
@@ -220,6 +444,7 @@ def generate_tree_html(answers_list):
     html = style + '<div class="tree-wrapper">' + "".join(rows_html) + '</div>'
     return html
 
+
 # -------------------------------
 # TITLE AND TREE IMAGE
 # -------------------------------
@@ -231,22 +456,26 @@ st.markdown(
 )
 
 st.subheader("Tree Status")
-st.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
+# 👉 AĞAÇ İÇİN PLACEHOLDER
+tree_placeholder = st.empty()
+tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
 
 st.markdown(
-"""
-**Colors:**
+    """
+    **Colors:**
 
-- Leaves (questions 3–30): ✅ True = 🟩, ❌ False = 🟥  
-- Stem (questions 1–2): ✅ True = 🟫, ❌ False = ⬛
-"""
+    - Leaves (questions 3–30): ✅ True = 🟩, ❌ False = 🟥  
+    - Stem (questions 1–2): ✅ True = 🟫, ❌ False = ⬛
+    """
 )
 
 # -------------------------------
 # TODAY'S QUESTION
 # -------------------------------
 if current_day is None:
-    st.subheader("All questions completed 🎉")
+    st.subheader("All questions for today are completed 🎉")
+    user_answer = None
 else:
     st.subheader(f"Day {current_day} – Today's Question")
 
@@ -258,25 +487,27 @@ else:
 
     user_answer = st.text_input("Your answer (e.g. A, B, C, D)", max_chars=10)
 
-    if st.button("Submit"):
-        normalized = None
-        if user_answer.strip():
-            normalized = user_answer.strip()[0].upper()
+# -------------------------------
+# SUBMIT BUTTON
+# -------------------------------
+if current_day is not None and st.button("Submit"):
+    normalized = None
+    if user_answer and user_answer.strip():
+        normalized = user_answer.strip()[0].upper()
 
-        correct_option = CORRECT_OPTIONS.get(current_day)
+    correct_option = CORRECT_OPTIONS.get(current_day)
 
-        if correct_option is None:
-            st.info("The correct answer for this question has not yet been defined.")
-        else:
-            is_correct = (normalized == correct_option.upper())
-            answers[current_day - 1] = is_correct
+    if correct_option is None:
+        st.info("The correct answer for this question has not yet been defined.")
+    else:
+        is_correct = (normalized == correct_option.upper())
+        answers[current_day - 1] = is_correct
 
-            user_record["answers"] = answers
-            data[username] = user_record
-            save_data(data)
+        user_record["answers"] = answers
+        data[username] = user_record
+        save_data(data)
 
-            st.success("Your answer has been saved. The colors in the tree have been updated in the below. 🎄")
+        st.success("Your answer has been saved! 🎉 Tree above has been updated.")
 
-        st.subheader("Updated Tree")
-        st.markdown(generate_tree_html(answers), unsafe_allow_html=True)
-
+        # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
+        tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
