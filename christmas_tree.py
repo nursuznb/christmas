@@ -61,11 +61,17 @@ def get_current_day(answers_list, max_open_day):
 # -------------------------------
 QUESTIONS = {
     1: (
-       "A researcher wants to estimate the average customer satisfaction score (on a scale of 1–10) for a product.\n After collecting a sample, they compute a 95% confidence interval of 7.2 ± 0.4.\n What does this confidence interval represent?\n\n"
-        "- **A)** It means that the true average is definitely 7.2.\n"
-        "- **B)** If we were to repeat the sampling process, all sample means would fall between 7.2 and 7.6.\n"
-        "- **C)** If we were to repeat this sampling procedure many times, 95% of the confidence intervals constructed would contain the true population mean.\n"
-        "- **D)** It means that 95% of the individuals in the sample scored between 7.2 and 7.6.\n"
+       "Say you are running a simple logistic regression to solve a problem but find the results to be unsatisfactory. What are some ways you might improve your model?\n\n"
+       "I. Adding additional features\n\n"
+       "II. Normalizing features\n\n"
+       "III. Addressing outliers\n\n"
+       "IV. Selecting variables\n\n"
+       "V. Cross validation and hyperparameter tuning\n\n"
+       
+        "- **A)** III and IV\n"
+        "- **B)** I, II, and III\n"
+        "- **C)** II, III, and IV\n"
+        "- **D)** All of the above\n"
     ),
     2: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -274,7 +280,7 @@ QUESTIONS = {
 
 # SORULARIN DOĞRU ŞIKLARI
 CORRECT_OPTIONS = {
-    1: "C",  # Q1: confidence interval sorusu → C şıkkı doğru
+    1: "D",  # Q1: confidence interval sorusu → C şıkkı doğru
     2: "A",
     3: "B",
     4: "D",
