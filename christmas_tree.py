@@ -8,6 +8,21 @@ import streamlit as st
 # -------------------------------
 st.set_page_config(page_title="Data Interview Christmas Tree", page_icon="🎄")
 
+# 🔹 Google Analytics (Çözüm 2) - BURAYA KENDİ ID'İNİ YAZ
+GA_SCRIPT = """
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXX');
+</script>
+"""
+
+# HTML/JS'i sayfaya enjekte et
+st.markdown(GA_SCRIPT, unsafe_allow_html=True)
+
 NUM_QUESTIONS = 30
 DATA_FILE = "answers.json"
 
@@ -511,4 +526,3 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
-
