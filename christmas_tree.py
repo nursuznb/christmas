@@ -81,11 +81,13 @@ QUESTIONS = {
         "- **D)** Feature Scaling\n"
     ),
     3: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+    "A researcher wants to estimate the average customer satisfaction score (on a scale of 1–10) for a product.\n"
+    "After collecting a sample, they compute a 95% confidence interval of 7.2 ± 0.4.\n"
+    "What does this confidence interval represent?\n\n"
+    "- **A)** It means that the true average is definitely 7.2.\n"
+    "- **B)** If we were to repeat the sampling process, all sample means would fall between 7.2 and 7.6.\n"
+    "- **C)** If we were to repeat this sampling procedure many times, 95% of the confidence intervals constructed would contain the true population mean.\n"
+    "- **D)** It means that 95% of the individuals in the sample scored between 7.2 and 7.6.\n"
     ),
     4: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -565,4 +567,5 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
