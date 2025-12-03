@@ -280,7 +280,7 @@ QUESTIONS = {
 
 # SORULARIN DOĞRU ŞIKLARI
 CORRECT_OPTIONS = {
-    1: "D",  # Q1: confidence interval sorusu → C şıkkı doğru
+    1: "D", 
     2: "A",
     3: "B",
     4: "D",
@@ -565,3 +565,4 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
