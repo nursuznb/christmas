@@ -284,7 +284,7 @@ QUESTIONS = {
 CORRECT_OPTIONS = {
     1: "D", 
     2: "A",
-    3: "B",
+    3: "C",
     4: "D",
     5: "A",
     6: "C",
@@ -567,5 +567,6 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
