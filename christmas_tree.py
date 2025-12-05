@@ -90,11 +90,11 @@ QUESTIONS = {
     "- **D)** It means that 95% of the individuals in the sample scored between 7.2 and 7.6.\n"
     ),
     4: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "Say you flip a coin 10 times and observe only one head. What would be your p-value for testing whether the coin is fair or not?\n\n"
+        "- **A)** 1/1024\n"
+        "- **B)** 10/1024\n"
+        "- **C)** 12/1024\n"
+        "- **D)** 22/1024\n"
     ),
     5: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -567,6 +567,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
