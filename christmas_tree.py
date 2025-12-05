@@ -97,11 +97,11 @@ QUESTIONS = {
         "- **D)** 22/1024\n"
     ),
     5: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "What is an example of a machine learning algorithm that is not convex?\n\n"
+        "- **A)** Ridge Regression\n"
+        "- **B)** Neural Networks\n"
+        "- **C)** Elastic Net Regression\n"
+        "- **D)** Linear Support Vector Machine\n"
     ),
     6: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -286,7 +286,7 @@ CORRECT_OPTIONS = {
     2: "A",
     3: "C",
     4: "D",
-    5: "A",
+    5: "B",
     6: "C",
     7: "B",
     8: "D",
@@ -567,6 +567,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
