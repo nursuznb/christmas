@@ -104,11 +104,11 @@ QUESTIONS = {
         "- **D)** Linear Support Vector Machine\n"
     ),
     6: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "Which of the following is NOT a common characteristic of both L1 and L2 regularization methods?\n\n"
+        "- **A)** They help reduce overfitting.\n"
+        "- **B)** They add a penalty term to the loss function.\n"
+        "- **C)** They force all coefficients to become exactly zero.\n"
+        "- **D)** They help control model complexity.\n"
     ),
     7: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -567,6 +567,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
