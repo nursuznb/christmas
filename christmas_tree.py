@@ -111,12 +111,13 @@ QUESTIONS = {
         "- **D)** They help control model complexity.\n"
     ),
     7: (
-        "Say X is a univariate Gaussian random variable. What is the entropy of X?\n\n"
-        "- **A)** st.latex(r"H(x) = \frac{1}{2} + \log\left( \sigma \sqrt{2\pi} \right)")\n"
-        "- **B)** st.latex(r"H(x) = -\log\left( \sigma \sqrt{2\pi} \right)")\n"
-        "- **C)** st.latex(r"H(x) = \frac{1}{2} - \log\left( \sigma \sqrt{2\pi} \right)")\n"
-        "- **D)** st.latex(r"H(x) = \frac{1}{2}")\n"
+      "Say X is a univariate Gaussian random variable. What is the entropy of X?\n\n"
+      "- **A)**  $H(X) = \\frac{1}{2} + \\log(\\sigma \\sqrt{2\\pi})$\n"
+      "- **B)**  $H(X) = -\\log(\\sigma \\sqrt{2\\pi})$\n"
+      "- **C)**  $H(X) = \\frac{1}{2} - \\log(\\sigma \\sqrt{2\\pi})$\n"
+      "- **D)**  $H(X) = \\frac{1}{2}$\n"
     ),
+
     8: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
         "- **A)** One-Hot Encoding\n"
@@ -567,6 +568,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
