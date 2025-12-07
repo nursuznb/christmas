@@ -111,11 +111,11 @@ QUESTIONS = {
         "- **D)** They help control model complexity.\n"
     ),
     7: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "Say X is a univariate Gaussian random variable. What is the entropy of X?\n\n"
+        "- **A)** st.latex(r"H(x) = \frac{1}{2} + \log\left( \sigma \sqrt{2\pi} \right)")\n"
+        "- **B)** st.latex(r"H(x) = -\log\left( \sigma \sqrt{2\pi} \right)")\n"
+        "- **C)** st.latex(r"H(x) = \frac{1}{2} - \log\left( \sigma \sqrt{2\pi} \right)")\n"
+        "- **D)** st.latex(r"H(x) = \frac{1}{2}")\n"
     ),
     8: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -288,7 +288,7 @@ CORRECT_OPTIONS = {
     4: "D",
     5: "B",
     6: "C",
-    7: "B",
+    7: "A",
     8: "D",
     9: "A",
     10: "C",
@@ -567,6 +567,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
