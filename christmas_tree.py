@@ -119,11 +119,12 @@ QUESTIONS = {
     ),
 
     8: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+      "Say you were running a linear regression for a dataset but you accidentally duplicated every data point.\n" 
+      "What happens to your beta coefficient?\n"
+      "- **A)**  $"\beta = (2X^T X) \, 2X^T y"$\n"
+      "- **B)**  $"\beta = (2X^T X)^{-1} \, 2X^T y"$\n"
+      "- **C)**  $"\beta = (2X^T X)^{-1} $\n"
+      "- **D)**  $"\beta = (2X^T X)^{-1} \, 2X^T"$\n"
     ),
     9: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -290,7 +291,7 @@ CORRECT_OPTIONS = {
     5: "B",
     6: "C",
     7: "A",
-    8: "D",
+    8: "B",
     9: "A",
     10: "C",
     11: "B",
@@ -568,6 +569,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
