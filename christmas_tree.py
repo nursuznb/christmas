@@ -127,11 +127,11 @@ QUESTIONS = {
     "- **D)**  $\\beta = (2X^T X)^{-1}(2X^T y)$\n"
 ),
     9: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "Say you are given a very large corpus of words. How would you identify synonyms?\n\n"
+        "- **A)** Train word embeddings (e.g., Word2Vec) to represent words as vectors, then measure vector similarity (e.g., cosine similarity) or apply clustering / nearest-neighbor search to find similar words.\n"
+        "- **B)** Count how often two words appear in the same sentence and consider any pair with similar frequencies as synonyms.\n"
+        "- **C)** Sort all words alphabetically and compare words that start with the same letter to identify synonyms.\n"
+        "- **D)** Remove all stopwords from the corpus and assume the remaining words that appear most frequently are each other’s synonyms.\n"
     ),
     10: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -569,6 +569,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
