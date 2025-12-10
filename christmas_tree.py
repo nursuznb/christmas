@@ -135,10 +135,10 @@ QUESTIONS = {
     ),
     10: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "- **A)** It guarantees that all random variables in nature follow a normal distribution regardless of sample size.\n"
+        "- **B)** It states that any dataset becomes normally distributed after removing outliers.\n"
+        "- **C)** It allows us to assume that the sampling distribution of the sample mean is approximately normal, even if the population distribution is not normal, provided the sample size is large enough.\n"
+        "- **D)** It ensures that the variance of the sample mean is always equal to the variance of the population.\n"
     ),
     11: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -569,6 +569,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
