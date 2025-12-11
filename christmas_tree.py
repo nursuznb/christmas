@@ -141,11 +141,11 @@ QUESTIONS = {
         "- **D)** It ensures that the variance of the sample mean is always equal to the variance of the population.\n"
     ),
     11: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "Which of the following best describes the fundamental difference between entropy and information gain?\n\n"
+        "- **A)** Entropy can only be used with numerical variables, whereas information gain works only with categorical variables.\n"
+        "- **B)** Entropy measures the uncertainty or impurity of a dataset, while information gain measures how much this uncertainty decreases after splitting based on a feature.\n"
+        "- **C)** Information gain measures the raw disorder of the dataset, while entropy calculates the gain obtained after each split.\n"
+        "- **D)** Entropy and information gain are the same concept and can be used interchangeably in decision tree algorithms.\n"
     ),
     12: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -569,6 +569,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
