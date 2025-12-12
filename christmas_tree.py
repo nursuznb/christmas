@@ -148,11 +148,11 @@ QUESTIONS = {
         "- **D)** Entropy and information gain are the same concept and can be used interchangeably in decision tree algorithms.\n"
     ),
     12: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "In multivariate data analysis, _______ is a common technique for projecting high-dimensional data into two or three dimensions.\n\n"
+        "- **A)** K-means clustering\n"
+        "- **B)** Principal component analysis\n"
+        "- **C)** t-Distributed ctochastic neighbor embedding (t-SNE)\n"
+        "- **D)** Hierarchical clustering\n"
     ),
     13: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -295,7 +295,7 @@ CORRECT_OPTIONS = {
     9: "A",
     10: "C",
     11: "B",
-    12: "D",
+    12: "C",
     13: "A",
     14: "B",
     15: "C",
@@ -569,6 +569,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
