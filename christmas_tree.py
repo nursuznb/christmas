@@ -162,11 +162,11 @@ QUESTIONS = {
         "- **D)** Autocorrelation is not relevant in time series analysis.\n"
     ),
     14: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "When applying LDA to a dataset, what assumption about the data does the data scientist need to consider for effective dimensionality reduction?\n\n"
+        "- **A)** No assumption is needed\n"
+        "- **B)** Homogeneity of covariance matricesn"
+        "- **C)** Features are independent\n"
+        "- **D)** Normal distribution of features\n"
     ),
     15: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -569,6 +569,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
