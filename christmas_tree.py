@@ -169,11 +169,11 @@ QUESTIONS = {
         "- **D)** Normal distribution of features\n"
     ),
     15: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "What is the significance of using a logarithmic scale in data visualization?\n\n"
+        "- **A)** Displaying data in a bar chart format\n"
+        "- **B)** Simplifying data representation for beginners\n"
+        "- **C)** Emphasizing small values and compressing large values\n"
+        "- **D)** Highlighting outliers in a dataset\n"
     ),
     16: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -569,6 +569,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
