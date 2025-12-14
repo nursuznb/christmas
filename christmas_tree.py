@@ -155,11 +155,11 @@ QUESTIONS = {
         "- **D)** Hierarchical clustering\n"
     ),
     13: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "How does autocorrelation help in time series analysis?\n\n"
+        "- **A)** Autocorrelation measures the linear relationship between a time series and a lagged version of itself.\n"
+        "- **B)** Autocorrelation helps in predicting future values of a time series based on its past values.\n"
+        "- **C)** Autocorrelation measures the relationship between a time series and an unrelated external variable.\n"
+        "- **D)** Autocorrelation is not relevant in time series analysis.\n"
     ),
     14: (
         "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
@@ -569,6 +569,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
