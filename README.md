@@ -16,7 +16,6 @@ user interaction, and visualization into a single educational platform.
 - Daily statistics questions stored and managed within a system framework
 - Streamlit-based interactive user interface
 - Visual progress tracking and state management
-- Modular and extensible system architecture
 - Suitable for classroom use, self-study, and interview preparation
 
 ## Covered Topics
