@@ -7,11 +7,17 @@ Each day, users answer **one statistics question** and progress through
 a visual **“Christmas Tree” dashboard**, integrating statistical content,
 user interaction, and visualization into a single educational platform.
 
-## Features
-- Daily statistics questions
-- Interactive interface built with Streamlit
-- Visual progress tracking
-- Content focused on education and interview preparation
+## Purpose
+- To demonstrate the design of an **educational statistical information system**
+- To integrate **statistical knowledge, user interaction, and visualization**
+- To provide a reusable digital teaching tool for statistics and data science courses
+
+## Key Features
+- Daily statistics questions stored and managed within a system framework
+- Streamlit-based interactive user interface
+- Visual progress tracking and state management
+- Modular and extensible system architecture
+- Suitable for classroom use, self-study, and interview preparation
 
 ## Covered Topics
 - Probability
