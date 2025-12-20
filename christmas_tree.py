@@ -176,109 +176,109 @@ QUESTIONS = {
         "- **D)** Highlighting outliers in a dataset\n"
     ),
     16: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "What is the role of stationarity in time series forecasting?\n\n"
+        "- **A)** Stationarity is not relevant in time series forecasting\n"
+        "- **B)** Non-stationary time series are easier to forecast\n"
+        "- **C)** Stationarity is only important for short-term forecasts\n"
+        "- **D)** Stationarity ensures constant mean and variance over time\n"
     ),
     17: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "When dealing with high-dimensional data, _______ techniques are crucial to reduce complexity without losing significant information.\n\n"
+        "- **A)** Dimensionality Reduction\n"
+        "- **B)** Feature Engineering\n"
+        "- **C)** Clustering\n"
+        "- **D)** Ensemble Learning\n"
     ),
     18: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "What are the pros and cons of imputing missing data versus removing observations with missing data?\n\n"
+        "- **A)** Faster processing, but decreased model performance\n"
+        "- **B)** Reducing bias, but loss of information\n"
+        "- **C)** Retaining more data for analysis, but potential introduction of bias\n"
+        "- **D)** Increased accuracy, but longer processing time\n"
     ),
     19: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "How does the concept of 'manifold learning' relate to dimensionality reduction?\n\n"
+        "- **A)** Emphasizes increasing the dimensionality of data for better understanding\n"
+        "- **B)** Focuses on preserving the intrinsic geometry of high-dimensional data\n"
+        "- **C)** Prioritizes random sampling for dimensionality reduction\n"
+        "- **D)** Utilizes clustering algorithms to create high-dimensional representations\n"
     ),
     20: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "How does a confusion matrix help in evaluating the performance of a classification algorithm?\n\n"
+        "- **A)** It visualizes the distribution of data points in a dataset\n"
+        "- **B)** It evaluates the impact of outliers on model performance\n"
+        "- **C)** It measures the accuracy of a model by comparing predicted and actual values\n"
+        "- **D)** It provides a summary of prediction results, showing the correct and incorrect predictions\n"
     ),
     21: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "For a time-sensitive financial forecasting model, what considerations should be taken when choosing a supervised learning algorithm?\n\n"
+        "- **A)** The algorithm's ability to handle streaming data\n"
+        "- **B)** The algorithm's performance in terms of accuracy and precision\n"
+        "- **C)** The algorithm's scalability to large datasets\n"
+        "- **D)** The algorithm's interpretability for regulatory compliance\n"
     ),
     22: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "How does feature selection impact the performance of a machine learning model?\n\n"
+        "- **A)** Increases model complexity, enhances generalization\n"
+        "- **B)** Reduces overfitting, improves model training time\n"
+        "- **C)** Has no impact on model performance\n"
+        "- **D)** Improves model accuracy by default\n"
     ),
     23: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "In model evaluation, what does the AUC represent in the context of an ROC curve?\n\n"
+        "- **A)** Accuracy of the model\n"
+        "- **B)** True Positive Rate\n"
+        "- **C)** Area Under the Curve\n"
+        "- **D)** Probability of misclassification\n"
     ),
     24: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "In decision tree algorithms, the criterion of _______ is used to decide the feature on which to split.\n\n"
+        "- **A)** Entropy\n"
+        "- **B)** Gini index\n"
+        "- **C)** Chi-square\n"
+        "- **D)** Information gain\n"
     ),
     25: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "What is the significance of interaction terms in feature engineering?\n\n"
+        "- **A)** Capturing synergistic effects between features\n"
+        "- **B)** Eliminating outliers in the dataset\n"
+        "- **C)** Improving model interpretability\n"
+        "- **D)** Reducing dimensionality\n"
     ),
     26: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "In a medical diagnosis application, a supervised model shows high accuracy but low recall. What could be the implications for patient diagnosis?\n\n"
+        "- **A)** The model is making many false positive predictions, leading to unnecessary treatments\n"
+        "- **B)** The model is not suitable for medical diagnosis applications\n"
+        "- **C)** The model is correctly identifying most positive cases but missing some, which could lead to false negatives\n"
+        "- **D)** The model is well-balanced and is performing optimally\n"
     ),
     27: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
+        "What is the bias-variance tradeoff in supervised learning, and why is it important?\n\n"
         "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "- **B)** Maximizing both bias and variance for a more flexible model\n"
+        "- **C)** Ignoring bias and focusing solely on variance\n"
+        "- **D)** Minimizing both bias and variance for optimal model performance\n"
     ),
     28: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "What is the main advantage of using a convolutional neural network (CNN) over a fully connected neural network for image processing?\n\n"
+        "- **A)** Lower memory requirements\n"
+        "- **B)** Better handling of sequential data\n"
+        "- **C)** Faster training time\n"
+        "- **D)** Ability to capture spatial hierarchies and local patterns\n"
     ),
     29: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "How do ensemble methods improve the performance of a supervised learning model?\n\n"
+        "- **A)** Increasing model complexity\n"
+        "- **B)** Applying feature scaling\n"
+        "- **C)** Reducing the number of features\n"
+        "- **D)** Averaging predictions of multiple models\n"
     ),
     30: (
-        "“______ is a common method used to handle categorical data in preprocessing.”\n\n"
-        "- **A)** One-Hot Encoding\n"
-        "- **B)** Principal Component Analysis\n"
-        "- **C)** Logistic Regression\n"
-        "- **D)** Feature Scaling\n"
+        "What is the purpose of transfer learning in deep learning models?\n\n"
+        "- **A)** Using knowledge gained from training on one task to improve performance on a different, but related, task\n"
+        "- **B)** Ignoring pre-trained weights for better generalization\n"
+        "- **C)** Training a model on multiple tasks simultaneously\n"
+        "- **D)** Transferring weights directly from one layer to another in the same network\n"
     )
 }
 
@@ -312,8 +312,8 @@ CORRECT_OPTIONS = {
     26: "C",
     27: "B",
     28: "D",
-    29: "A",
-    30: "B",
+    29: "D",
+    30: "A",
 }
 
 
@@ -569,6 +569,7 @@ if current_day is not None and st.button("Submit"):
 
         # 🔁 AĞACI AYNI ÇALIŞTIRMADA TEKRAR ÇİZDİR
         tree_placeholder.markdown(generate_tree_html(answers), unsafe_allow_html=True)
+
 
 
 
